@@ -48,6 +48,8 @@ Technology should be selected based on the problem, data, risk, and operational 
 
 **Data:** income, credit score, loan amount, employment history, previous defaults, transaction behavior, debt-to-income ratio (2M customer records, structured/tabular).
 
+### Recommended Solution
+
 1. **ML or DL?** ML. This is structured, tabular data with a moderate number of well-understood features — tree-based ML models handle this as well as or better than DL, train faster, and are far more interpretable (important for credit decisions, which are often regulated/auditable).
 2. **Algorithms to consider:** Logistic Regression (baseline, interpretable), Random Forest, Gradient Boosting (XGBoost / LightGBM / CatBoost) — boosting typically wins on tabular credit-risk data.
 3. **Target variable:** A binary flag, e.g. `defaulted` (1 = defaulted within the observation window, 0 = did not), usually defined over a fixed horizon (e.g. defaulted within 12/24 months of loan origination).
